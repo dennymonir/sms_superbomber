@@ -202,7 +202,7 @@ def mail(to, gmail_user, gmail_pwd, subject, text):
    mailServer.close()
 
 # Iterate through messages? Feature to add at some point
-email_subj = options.subject is not None or raw_input("[>] Enter Subject: ")
+email_subj = options.subject is not None and options.subject or raw_input("[>] Enter Subject: ")
 email_body = options.message or raw_input("[>] Type message body [enter to quit]: ")
 
 
