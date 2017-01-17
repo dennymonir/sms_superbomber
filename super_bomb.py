@@ -129,6 +129,7 @@ phoneHash = {
   "20": "US Cellular",
   "21": "Verizon",
   "22": "Virgin Mobile",
+  "23": "Google Voice",
 }
 
 
@@ -167,9 +168,10 @@ provider = [
     "email.uscc.net",
     "vtext.com",
     "vmobl.com",
+    "txt.voice.google.com",
 ]
 
-sms_email = str(phonenum + "@" + provider[int(foundprov)])
+sms_email = str(phonenum + "@" + provider[int(foundprov) - 1])
 
 print
 print "[+] Determined SMS Recipient Address : " + sms_email
